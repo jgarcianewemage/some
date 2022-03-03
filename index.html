@@ -12,13 +12,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
- <link id="cs" rel="stylesheet" href="/main.css">
+ <link id="cs" rel="stylesheet" data-href="/main.css">
  <script>
   var r = '?'+Date.now(),
       cs = document.getElementById('cs'),
       js = document.getElementById('js');
-     cs.href += r;
-     js.src += r;
+     cs.href += cs.dataset.href + r;
+     js.src += js.dataset.src + r;
    //fck cache  
  </script>
 </head>
@@ -26,4 +26,4 @@
   
   <h1>Test 2</h1>
 
- <script id="js" src="/main.js"></script>
+ <script id="js" data-src="/main.js"></script>
